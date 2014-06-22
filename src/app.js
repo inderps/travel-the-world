@@ -1,9 +1,11 @@
 $(document).ready(function(){
   Map.init();
-  Map.addLocation('pakistan', "Rs 500");
 
-  FareApi.fetch('DEL', 'IXB', '20140628', function(result){
-    console.log(result.fare);
-  });
-
+  for (var index = 0; index < DESTINATIONS.length; index++) {
+    FareApi.fetch('DEL', DESTINATIONS[index].code, '20140920', index, function(result, i){
+      if(result){
+        Map.addLocation(DESTINATIONS[i].place, "Rs: " + result.fare.totalfare);
+      }
+    });
+  }
 });
