@@ -8,3 +8,4 @@
   color: #fff;
   padding: 3px;
 }
+.datepicker{z-index:2000 !important;}

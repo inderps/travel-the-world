@@ -3,11 +3,13 @@
     <title>Travel the World</title>
     <link rel="stylesheet" type="text/css" href="src/app.css">
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/datepicker/datepicker.css">
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYE3f6twEvAcFpwQMLaTmaKhvxqUxu6h4"></script>
     <script type="text/javascript" src="lib/jquery/jquery.js"></script>
     <script type="text/javascript" src="lib/jquery/crossdomain.js"></script>
     <script type="text/javascript" src="lib/underscorejs/underscore.js"></script>
     <script type="text/javascript" src="lib/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/datepicker/bootstrap-datepicker.js"></script>
     <script type="text/javascript" src="lib/google-maps/markerwithlabel.js"></script>
     <script type="text/javascript" src="src/destinations.js"></script>
     <script type="text/javascript" src="src/map.js"></script>
@@ -17,5 +19,31 @@
 </head>
 <body>
     <div id="map"></div>
+    <div class="modal fade" id="choiceModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Search flights</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputDate">Expected Travel Date: </label>
+                            <input type="text" class="form-control" id="inputDate" placeholder="Date of Journey">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" id="submitForm" class="btn btn-primary">Submit</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 </body>
 </html>
