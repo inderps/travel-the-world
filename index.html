@@ -4,6 +4,8 @@
     <link rel="stylesheet" type="text/css" href="src/app.css">
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="lib/datepicker/datepicker.css">
+    <link rel="stylesheet" type="text/css" href="lib/select2/select2.css">
+    <link rel="stylesheet" type="text/css" href="lib/select2/select2-bootstrap.css">
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYE3f6twEvAcFpwQMLaTmaKhvxqUxu6h4"></script>
     <script type="text/javascript" src="lib/jquery/jquery.js"></script>
     <script type="text/javascript" src="lib/jquery/crossdomain.js"></script>
@@ -11,6 +13,7 @@
     <script type="text/javascript" src="lib/bootstrap/bootstrap.min.js"></script>
     <script type="text/javascript" src="lib/datepicker/bootstrap-datepicker.js"></script>
     <script type="text/javascript" src="lib/google-maps/markerwithlabel.js"></script>
+    <script type="text/javascript" src="lib/select2/select2.min.js"></script>
     <script type="text/javascript" src="src/destinations.js"></script>
     <script type="text/javascript" src="src/map.js"></script>
     <script type="text/javascript" src="src/fare-api.js"></script>
@@ -29,12 +32,12 @@
                 <div class="modal-body">
                     <form role="form">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                            <label for="inputFrom">Home Airport</label>
+                            <input type="text" class="form-control" id="inputFrom" placeholder="Enter your home airport">
                         </div>
                         <div class="form-group">
                             <label for="inputDate">Expected Travel Date: </label>
-                            <input type="text" class="form-control" id="inputDate" placeholder="Date of Journey">
+                            <input type="text" class="form-control" id="inputDate" placeholder="Enter Date of Journey">
                         </div>
                     </form>
                 </div>
