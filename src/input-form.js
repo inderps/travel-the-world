@@ -1,7 +1,9 @@
 var InputForm = {
   bind: function(){
-    $('#inputDateFrom').datepicker({autoclose: true});
     $('#inputDateTo').datepicker({autoclose: true});
+    $('#inputDateFrom').datepicker({autoclose: true}).on('changeDate', function(e){
+      $('#inputDateTo').datepicker('setStartDate', new Date($("#inputDateFrom").val()));
+    });
     $("#inputFrom").select2({
       placeholder: "Search for a airport",
       minimumInputLength: 3,
