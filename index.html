@@ -16,8 +16,8 @@
     <script type="text/javascript" src="lib/select2/select2.min.js"></script>
     <script type="text/javascript" src="src/destinations.js"></script>
     <script type="text/javascript" src="src/map.js"></script>
-    <script type="text/javascript" src="src/fare-api.js"></script>
     <script type="text/javascript" src="src/cleartrip-api.js"></script>
+    <script type="text/javascript" src="src/input-form.js"></script>
     <script type="text/javascript" src="src/app.js"></script>
 </head>
 <body>
@@ -33,11 +33,15 @@
                     <form role="form">
                         <div class="form-group">
                             <label for="inputFrom">Home Airport</label>
-                            <input type="text" class="form-control" id="inputFrom" placeholder="Enter your home airport">
+                            <input type="text" class="form-control" required="true" id="inputFrom" placeholder="Enter your home airport">
                         </div>
                         <div class="form-group">
-                            <label for="inputDate">Expected Travel Date: </label>
-                            <input type="text" class="form-control" id="inputDate" placeholder="Enter Date of Journey">
+                            <label for="inputDateFrom">Expected Travel Date (from): </label>
+                            <input type="text" class="form-control" required="true" id="inputDateFrom" placeholder="Enter Date of Journe (from)y">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputDateTo">Expected Travel Date (to): </label>
+                            <input type="text" class="form-control" required="true" id="inputDateTo" placeholder="Enter Date of Journey (to)">
                         </div>
                     </form>
                 </div>

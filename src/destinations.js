@@ -46,5 +46,13 @@ var DESTINATIONS = [
   {
     code: 'MNL',
     place: 'manila'
+  },
+  {
+    code: 'KBL',
+    place: 'kabul, afghanistan'
+  },
+  {
+    code: 'KBL',
+    place: 'kabul, afghanistan'
   }
 ];

@@ -1,9 +1,9 @@
 var ClearTripApi = {
-  fetch: function(src, destination, date, i, callback){
+  fetch: function(src, destination, date, tripDays, i, callback){
     $.ajax({
       url: "http://www.cleartrip.com/flights/calendar/calendarstub.json",
       type:"get",
-      data:{from: src, to: destination, adults: 1, start_date: date, end_date: date},
+      data:{from: src, to: destination, adults: 1, start_date: date, end_date: date, return_after: tripDays},
       success: function(response) {
         var jsonStart = response.responseText.indexOf("<p>") + 3;
         var jsonEnd = response.responseText.indexOf("</p>");
