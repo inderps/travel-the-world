@@ -1,5 +1,6 @@
 var Map = {
   init: function(){
+    document.getElementById('map').style.height = window.innerHeight;
     this.map = new google.maps.Map(document.getElementById('map'), {
       zoom: 4,
       center: new google.maps.LatLng(28.635, 77.22496000000001),
